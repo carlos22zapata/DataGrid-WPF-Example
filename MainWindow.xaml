@@ -1,0 +1,32 @@
+﻿<Window x:Class="COUNTER.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COUNTER"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel Width="800" Height="65" VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+            <Button Height="60" Width="90" Click="Button_Click" Name="BtnPrueba">Prueba</Button>
+            <Button Height="60" Width="90" Content="Llena Grid" Click="Button_Click1"></Button>
+            <Button Height="60" Width="90" Content="Nuevo Registro" Name="NuevoRegistro" Click="NuevoRegistro_Click" ></Button>
+            <Button Height="60" Width="90" Content="Actualiza Registro" Name="ActualizaRegistro" Click="ActualizaRegistro_Click" ></Button>
+            <Button Height="60" Width="90" Content="Elimina Registro" Name="EliminaRegistro" Click="EliminaRegistro_Click" ></Button>
+            <TextBox Width="100" Height="30" Name="txtRemove"></TextBox>
+            <Label Width="150" Height="30" Name="lblTexto" >Texto</Label>
+            <TextBox Width="100" Height="30" Name="txtPorc"/>
+        </DockPanel>
+
+        <DataGrid Margin="0,113,0,0" Name="DGPrueba1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="File 1" Width="1*" Binding="{Binding dato1}"></DataGridTextColumn>
+                <DataGridTextColumn Header="File 2" Width="1*" Binding="{Binding dato2}"></DataGridTextColumn>
+                <DataGridTextColumn Header="File 3" Width="1*" Binding="{Binding dato3}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+    </Grid>
+</Window>
